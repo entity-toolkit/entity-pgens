@@ -10,4 +10,4 @@
 - `y1`, `y2` [float]: positions of transition regions (default: `-0.25` and `0.25`)
 - `inv_alfven_mach` [float]: inverse of the Alfvenic mach number, used to initialize $B_x$ (default: `0.0`, i.e. no B-field)
 
-![scheme](./imgs/schematic.svg)
+![scheme](./imgs/schematic.png)

@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="86mm"
+   width="85mm"
    height="80mm"
-   viewBox="0 0 43 40"
+   viewBox="0 0 85 80"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
@@ -32,7 +32,8 @@
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:lockguides="false" />
   <defs
      id="defs1">
     <linearGradient
@@ -100,9 +101,9 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffffff;stroke-width:0.264999"
+       style="fill:#ffffff;stroke-width:0.263454"
        id="rect2"
-       width="86"
+       width="85"
        height="80"
        x="0"
        y="0" />

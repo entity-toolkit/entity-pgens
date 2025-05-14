@@ -91,7 +91,7 @@ namespace user {
       , y2 { p.template get<real_t>("setup.y2", 0.25) }
       , init_flds { drift_vel * density *
                     p.template get<real_t>("setup.inv_alfven_mach", 0.0) /
-                    math::sqrt(p.template get<real_t>("scale.sigma0")) } {}
+                    math::sqrt(p.template get<real_t>("scales.sigma0")) } {}
 
     inline void InitPrtls(Domain<S, M>& domain) {
       const auto en_dist  = KHDistribution<S, M>(domain.mesh.metric,

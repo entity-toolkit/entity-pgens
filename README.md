@@ -7,7 +7,7 @@ This separate repository is intended to store non-standard user-contributed prob
 This repository is automatically added as a submodule to the main Entity code. To use any of the problem generators with the Entity itself, simply download the submodule if not already (from the Entity root):
 
 ```sh
-git submodule update --remote --init --recursive
+git submodule update --init
 ```
 
 then, when configuring, specify the name of the pgen with a `pgens/` prefix. E.g.,

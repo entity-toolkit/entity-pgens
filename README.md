@@ -28,3 +28,5 @@ Each problem generator is put in a specific directory that bears a descriptive a
   - an image/plot of what the result should look like;
 - `toml` file with example input parameters;
 - `py` file with a plotting routine specific to that particular setup.
+
+To add a problem generator, either create a separate branch, add it there with all the additional components listed above, and then open a pull request (alternatively, for this repository, and open PR from there).

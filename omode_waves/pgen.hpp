@@ -21,6 +21,25 @@
 namespace user {
   using namespace ntt;
 
+  template <Dimension D>
+  struct ExternalFields {
+    ExternalFields(real_t fb0)
+      : fb0 { fb0 } {}
+
+    const std::vector<unsigned short> species { 1, 2 };
+
+    ExternalFields() = default;
+
+    Inline auto ex1(const unsigned short&,
+                    const real_t& time,
+                    const coord_t<D>& x_Ph) const -> real_t {
+      return ONE;
+    }
+
+  private:
+    real_t fb0;
+  };
+
   // initializing guide field and curl(B) = J_ext at the initial time step
   template <Dimension D>
   struct InitFields {
@@ -109,6 +128,7 @@ public:
 
     ExternalCurrent<D> ext_current;
     InitFields<D>      init_flds;
+    ExternalFields<M::PrtlDim> ext_force;
 
     inline PGen(const SimulationParams& p, const Metadomain<S, M>& global_domain)
       : arch::ProblemGenerator<S, M> { p }
@@ -126,6 +146,7 @@ public:
       , frequency { p.template get<real_t>("setup.frequency") }
       , init_flds { ONE }
       , ext_current { amplitude, nwave_x, nwave_y, nwave_z, frequency, sx1, sx2, sx3 }
+      , ext_force { amplitude }
       {}
 
     inline void InitPrtls(Domain<S, M>& local_domain) {

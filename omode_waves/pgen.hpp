@@ -30,6 +30,26 @@ namespace user {
 
     ExternalFields() = default;
 
+    Inline auto fx1(const unsigned short&,
+                    const real_t& time,
+                    const coord_t<D>& x_Ph) const -> real_t {
+      return ZERO;
+    }
+
+  
+    Inline auto fx2(const unsigned short&,
+                    const real_t& time,
+                    const coord_t<D>& x_Ph) const -> real_t {
+      return ZERO;
+    }
+
+  
+    Inline auto fx3(const unsigned short&,
+                    const real_t& time,
+                    const coord_t<D>& x_Ph) const -> real_t {
+      return ZERO;
+    }
+
     Inline auto ex1(const unsigned short&,
                     const real_t& time,
                     const coord_t<D>& x_Ph) const -> real_t {

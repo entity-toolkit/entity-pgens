@@ -201,13 +201,13 @@ public:
 
         if(rank == MPI_ROOT_RANK) {
 
-          pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::ex1);
+          pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1);
 
         }
 
       #else
 
-      pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::ex1);
+      pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1);
 
       #endif
 

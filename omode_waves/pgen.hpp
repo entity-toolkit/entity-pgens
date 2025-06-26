@@ -201,14 +201,32 @@ public:
 
         if(rank == MPI_ROOT_RANK) {
 
+            coord_t<Dim::_2D> x_Cd { ZERO };
+            vec_t<Dim::_3D>   b_Cntrv { EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1),
+                                      EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx2),
+                                      EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx3) };
+            vec_t<Dim::_3D>   b_XYZ;
+            metric.template transform<Idx::U, Idx::T>(x_Cd,
+                                                                  b_Cntrv,
+                                                                  b_XYZ);
+
           pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1);
 
         }
 
       #else
 
-      pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1);
+            coord_t<Dim::_2D> x_Cd { ZERO };
+            vec_t<Dim::_3D>   b_Cntrv { EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1),
+                                      EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx2),
+                                      EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx3) };
+            vec_t<Dim::_3D>   b_XYZ;
+            metric.template transform<Idx::U, Idx::T>(x_Cd,
+                                                                  b_Cntrv,
+                                                                  b_XYZ);
 
+          pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1);
+          
       #endif
 
        }

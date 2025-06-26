@@ -206,7 +206,7 @@ public:
                                       EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx2),
                                       EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx3) };
             vec_t<Dim::_3D>   b_XYZ;
-            local_domain.mesh.metric.template transform<Idx::U, Idx::T>(x_Cd,
+            domain.mesh.metric.template transform<Idx::U, Idx::T>(x_Cd,
                                                                   b_Cntrv,
                                                                   b_XYZ);
 
@@ -221,7 +221,7 @@ public:
                                       EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx2),
                                       EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx3) };
             vec_t<Dim::_3D>   b_XYZ;
-            local_domain.mesh.metric.template transform<Idx::U, Idx::T>(x_Cd,
+            domain.mesh.metric.template transform<Idx::U, Idx::T>(x_Cd,
                                                                   b_Cntrv,
                                                                   b_XYZ);
 

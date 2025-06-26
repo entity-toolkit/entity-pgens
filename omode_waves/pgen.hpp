@@ -210,7 +210,7 @@ public:
                                                                   b_Cntrv,
                                                                   b_XYZ);
 
-          pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1);
+          pnt_quantity = b_XYZ[0];
 
         }
 
@@ -225,7 +225,7 @@ public:
                                                                   b_Cntrv,
                                                                   b_XYZ);
 
-          pnt_quantity = EB(N_GHOSTS + 1, N_GHOSTS + 1, em::bx1);
+          pnt_quantity = b_XYZ[0];
 
       #endif
 

@@ -1,7 +1,7 @@
 [simulation]
   name    = "compton_emission"
   engine  = "srpic"
-  runtime = 10.0
+  runtime = 100.0
 
 [grid]
   resolution = [64, 64]
@@ -28,7 +28,6 @@
       gamma_qed         = 50.0
       photon_energy_min = 0.001
       photon_weight     = 1.0
-      photon_sampling   = 1.0
       photon_species    = 2
 
 [algorithms]
@@ -48,14 +47,14 @@
     label    = "e-"
     mass     = 1.0
     charge   = -1.0
-    maxnpart = 1e6
+    maxnpart = 1e3
     emission = "compton"
 
   [[particles.species]]
     label    = "ph"
     mass     = 0.0
     charge   = 0.0
-    maxnpart = 1e6
+    maxnpart = 1e3
 
 [setup]
   sp1_positions = [[0.5, 0.5]]
